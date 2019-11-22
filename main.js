@@ -38,7 +38,14 @@ function ord(n) {
 
 // generate for (now random) moodblocks
 let moodBlocks = document.getElementById('moodBlocks')
+
+
+let moodArray = ['Very though', 'Difficult', 'Average', 'Great','Amazing']
+let currentMoodArray = [0,0,0,0,0]
+let countMood = 0
+
 for(let i=1; i<=thisMonthsNumberOfDays; i++){
+  let moodId = 0
   let gridContainer = document.createElement('div')
   gridContainer.className = 'grid-container justify-content-center'
   gridContainer.id = 'gridContainer-'+i
@@ -49,32 +56,45 @@ for(let i=1; i<=thisMonthsNumberOfDays; i++){
   
   // append element to gridContainer
   gridContainer.appendChild(blockRowDate)
-  let moodId = 0
-  let moodArray = ['Amazing','Great','Average','Difficult','Very Though']
   for(let j=1; j<=12; j++){
+    
     let gridItem = document.createElement('div')
-
+    
+    gridItem.setAttribute('title',`${ord(i)} of ${nameOfMonth}`);
     if(j<4 && i<day){
-      moodId = random(1,3)
-      gridItem.setAttribute('title',`on ${ord(i)} of ${nameOfMonth}, my Morning was ${moodArray[moodId-1]}`)
+      moodId = random(3,5)
+      currentMoodArray[moodId-1] += 1
+      countMood++
+      gridItem.setAttribute('data-content',`my morning was ${moodArray[moodId-1]}`)
     }else if(j<7 && i<day){
-      moodId = random(1,4)
-      gridItem.setAttribute('title',`on ${ord(i)} of ${nameOfMonth}, my Noon was ${moodArray[moodId-1]}`)
+      moodId = random(2,5)
+      currentMoodArray[moodId-1] += 1
+      countMood++
+      gridItem.setAttribute('data-content',`my noon was ${moodArray[moodId-1]}`)
     }else if(j<10 && i<day){
       moodId = random(1,5)
-      gridItem.setAttribute('title',`on ${ord(i)} of ${nameOfMonth}, my Afternoon was ${moodArray[moodId-1]}`)
+      currentMoodArray[moodId-1] += 1
+      countMood++
+      gridItem.setAttribute('data-content',`my afternoon was ${moodArray[moodId-1]}`)
     }else if(j<=12 && i<day) {
-      moodId = random(1,5)
-      gridItem.setAttribute('title',`on ${ord(i)} of ${nameOfMonth}, my Evening was ${moodArray[moodId-1]}`)
+      moodId = random(2,4)
+      currentMoodArray[moodId-1] += 1
+      countMood++
+      gridItem.setAttribute('data-content',`my evening was ${moodArray[moodId-1]}`)
     }
 
     gridItem.id = `gi-${j}`
     // jquery initialize tooltip on every brick
     $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
+      $('[data-toggle="popover"]').popover()
     })
-    gridItem.setAttribute('data-toggle','tooltip')
-    gridItem.setAttribute('data-placement','right')
+    $('.popover-dismiss').popover({
+      trigger: 'focus'
+    })
+
+    gridItem.setAttribute('data-toggle','popover')
+    gridItem.setAttribute('data-trigger','focus')
+    gridItem.setAttribute('tabindex','0')
     if(i == day){
       gridItem.className = `grid-item-today moodType-${moodId}`
     } else {
@@ -84,4 +104,18 @@ for(let i=1; i<=thisMonthsNumberOfDays; i++){
   }
   moodBlocks.appendChild(gridContainer)
 }
+
+
+console.log(currentMoodArray, countMood);
+let percentage0 = document.getElementById('percentage-0').textContent = (currentMoodArray[0]/countMood*100).toFixed(0)+'%' 
+let percentage1 = document.getElementById('percentage-1').textContent = (currentMoodArray[1]/countMood*100).toFixed(0)+'%' 
+let percentage2 = document.getElementById('percentage-2').textContent = (currentMoodArray[2]/countMood*100).toFixed(0)+'%' 
+let percentage3 = document.getElementById('percentage-3').textContent = (currentMoodArray[3]/countMood*100).toFixed(0)+'%' 
+let percentage4 = document.getElementById('percentage-4').textContent = (currentMoodArray[4]/countMood*100).toFixed(0)+'%' 
+
+let ratio0 = document.getElementById('ratio-0').textContent = '(' + currentMoodArray[0] + ' / ' + countMood + ')'
+let ratio1 = document.getElementById('ratio-1').textContent = '(' + currentMoodArray[1] + ' / ' + countMood + ')'
+let ratio2 = document.getElementById('ratio-2').textContent = '(' + currentMoodArray[2] + ' / ' + countMood + ')'
+let ratio3 = document.getElementById('ratio-3').textContent = '(' + currentMoodArray[3] + ' / ' + countMood + ')'
+let ratio4 = document.getElementById('ratio-4').textContent = '(' + currentMoodArray[4] + ' / ' + countMood + ')'
 // console.log(gridContainer)

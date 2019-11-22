@@ -8,6 +8,13 @@
   display: grid;
   grid-template-columns: repeat(13, 2em);
 }
+.grid-label{
+  grid-column: span 3;
+  margin-right: 2px;
+  margin-top: 2px;
+  text-align: left;
+  margin-bottom: 0.3em;
+}
 .grid-item{
   margin-right: 2px;
   margin-top: 2px;
@@ -25,20 +32,23 @@
   cursor: pointer;
 }
 
-/* moodArray = ['Amazing','Great','Average','Difficult','Very Though'] */
-.moodType-1{
+/* moodArray = ['Very though', 'Difficult', 'Average', 'Great','Amazing'] */
+.moodType-5{
   background-color: #e3ffb0;
   border: 1px solid #292833;
 }
-.moodType-2{
+.moodType-4{
   background-color: #bae8e8;
 }
 .moodType-3{
   background-color: #ecffff;
 }
-.moodType-4{
+.moodType-2{
   background-color: #3aadad;
 }
-.moodType-5{
+.moodType-1{
   background-color: #292833;
 }
+
+
+/* Table */

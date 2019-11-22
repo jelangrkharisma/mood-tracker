@@ -23,10 +23,17 @@
 
   <!-- Dashboard Start Here -->
   <div id="content" class="container">
-    <div class="jumbotron">
+    <div class="jumbotron bg-info text-white">
       <h1 class="display-4">Hello, Jelang!</h1>
       <hr class="my-4">
       <p class="lead">Welcome to your daily mood tracker. how do you feel today?</p>
+      <!-- <div class="btn-group" role="group">
+        <button id=" " type="button" class="btn btn-sm btn-light text-info">Very Though</button>
+        <button id=" " type="button" class="btn btn-sm btn-light text-info">Difficult</button>
+        <button id=" " type="button" class="btn btn-sm btn-light text-info">Average</button>
+        <button id=" " type="button" class="btn btn-sm btn-light text-info">Great</button>
+        <button id=" " type="button" class="btn btn-sm btn-light text-info">Amazing</button>
+      </div> -->
     </div>
     
     <div class="card">
@@ -43,7 +50,15 @@
             <h4 class="text-center"><span id="moodBlock-month">December</span>'s Mood Blocks </h4>
             <hr class="my-4">
 
-            <div id="moodBlocks"></div>
+            <div id="moodBlocks">
+              <div class="grid-container justify-content-center" id="gridContainerLabel">
+                <div><span></span></div>
+                <div class="grid-label">Morning</div>
+                <div class="grid-label">Noon</div>
+                <div class="grid-label">Afternoon</div>
+                <div class="grid-label">Evening</div>
+              </div>
+            </div>
           
           </div>
         </div>
@@ -52,13 +67,52 @@
       <div class="right-section col-lg-6">
         <br>
         <section name="moodblockLegends">
-          <div class="card">
-            <div class="card-body">
-              create color legend here
-            </div>
-          </div>
+					<table class="table table-hover">
+							<tbody>
+								<tr>
+									<th scope="row">
+										<div style="display: inline; border: none;" class="col-sm-2 grid-item moodType-5"></div>
+										<p style="display: inline-block;" class="col-sm-10">Amazing</p>
+									</th>
+									<td id="percentage-4">20%</td>
+									<td id="ratio-4">20 / 100</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<div style="display: inline;" class="col-sm-2 grid-item moodType-4"></div>
+										<p style="display: inline-block;" class="col-sm-10">Great</p>
+									</th>
+									<td id="percentage-3">20%</td>
+									<td id="ratio-3">20 / 100</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<div style="display: inline;" class="col-sm-2 grid-item moodType-3"></div>
+										<p style="display: inline-block;" class="col-sm-10">Average</p>
+									</th>
+									<td id="percentage-2">20%</td>
+									<td id="ratio-2">20 / 100</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<div style="display: inline;" class="col-sm-2 grid-item moodType-2"></div>
+										<p style="display: inline-block;" class="col-sm-10">Difficult</p>
+									</th>
+									<td id="percentage-1">20%</td>
+									<td id="ratio-1">20 / 100</td>
+								</tr>
+								<tr>
+									<th scope="row">
+										<div style="display: inline;" class="col-sm-2 grid-item moodType-1"></div>
+										<p style="display: inline-block;" class="col-sm-10">Very Tough</p>
+									</th>
+									<td  id="percentage-0">20%</td>
+									<td id="ratio-0">20 / 100</td>
+								</tr>
+							</tbody>
+					</table>
         </section>
-        <br>
+
         <section name="journal">
           <!-- JOURNAL(S) -->
           <button type="btn-addJournal" class="btn btn-block btn-lg btn-outline-info" data-toggle="collapse" data-target="#journalCard">Write a Journal</button> 
@@ -67,7 +121,6 @@
             <div class="card">
               <div class="card-body">
                 <b>New Journal:</b><hr>
-
                 <form>
                   <div class="form-group">
                     <label for="input-title">Title</label>
@@ -80,10 +133,9 @@
                   <button type="submit" class="btn btn-info btn-block">Add </button>
                 </form>
               </div>
-              
             </div>
-            
           </div>
+
           <br>
           <div class="card">
             <div class="card-header"><b>Journal</b></div>
