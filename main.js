@@ -38,7 +38,6 @@ function ord(n) {
 
 // generate for (now random) moodblocks
 let moodBlocks = document.getElementById('moodBlocks')
-
 for(let i=1; i<=thisMonthsNumberOfDays; i++){
   let gridContainer = document.createElement('div')
   gridContainer.className = 'grid-container justify-content-center'
@@ -48,27 +47,25 @@ for(let i=1; i<=thisMonthsNumberOfDays; i++){
   blockRowDate.id = `blockRowDate-${i}`
   blockRowDate.appendChild(document.createTextNode(i))
   
-
-
   // append element to gridContainer
   gridContainer.appendChild(blockRowDate)
   let moodId = 0
-  let moodArray = ['Amazing', 'Great', 'Average','Difficult','Very Though']
+  let moodArray = ['Amazing','Great','Average','Difficult','Very Though']
   for(let j=1; j<=12; j++){
     let gridItem = document.createElement('div')
 
     if(j<4 && i<day){
       moodId = random(1,3)
-      gridItem.setAttribute('title',`on ${ord(i)}, my Morning was: ${moodArray[moodId-1]}`)
+      gridItem.setAttribute('title',`on ${ord(i)} of ${nameOfMonth}, my Morning was ${moodArray[moodId-1]}`)
     }else if(j<7 && i<day){
       moodId = random(1,4)
-      gridItem.setAttribute('title',`on ${ord(i)}, my Noon was: ${moodArray[moodId-1]}`)
+      gridItem.setAttribute('title',`on ${ord(i)} of ${nameOfMonth}, my Noon was ${moodArray[moodId-1]}`)
     }else if(j<10 && i<day){
       moodId = random(1,5)
-      gridItem.setAttribute('title',`on ${ord(i)}, my Afternoon was: ${moodArray[moodId-1]}`)
+      gridItem.setAttribute('title',`on ${ord(i)} of ${nameOfMonth}, my Afternoon was ${moodArray[moodId-1]}`)
     }else if(j<=12 && i<day) {
       moodId = random(1,5)
-      gridItem.setAttribute('title',`on ${ord(i)}, my Evening was: ${moodArray[moodId-1]}`)
+      gridItem.setAttribute('title',`on ${ord(i)} of ${nameOfMonth}, my Evening was ${moodArray[moodId-1]}`)
     }
 
     gridItem.id = `gi-${j}`
@@ -85,7 +82,6 @@ for(let i=1; i<=thisMonthsNumberOfDays; i++){
     }
     gridContainer.appendChild(gridItem)
   }
-  
   moodBlocks.appendChild(gridContainer)
 }
 // console.log(gridContainer)

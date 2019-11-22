@@ -1,5 +1,6 @@
 # mood-tracker
 i learned about JS, HTML, CSS, Bootsrap, and DOM with this projects.
+for demonstration purpose, the mood-blocks are generated randomly
 
 TO-DO: 
 * Add CRUD - Doms for Journals
