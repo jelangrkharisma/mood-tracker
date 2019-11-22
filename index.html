@@ -54,54 +54,64 @@
       </div>
       
       <div class="right-section col-lg-6">
-        <br>     
-        <button type="btn-addJournal" class="btn btn-block btn-outline-info" data-toggle="collapse" data-target="#journalCard">Write a Journal</button> 
-        <div id="journalCard" class="collapse">
-          <br>
+        <br>
+        <section name="moodblockLegends">
           <div class="card">
             <div class="card-body">
-              <b>New Journal:</b><hr>
-  
-              <form>
-                <div class="form-group">
-                  <label for="input-title">Title</label>
-                  <input type="email" class="form-control" id="input-title" placeholder="">
-                </div>
-                <div class="form-group">
-                  <label for="input-journal">Write Something Here</label>
-                  <textarea class="form-control" id="input-journal" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-info btn-block">Add </button>
-              </form>
+              create color legend here
+            </div>
+          </div>
+        </section>
+        <br>
+        <section name="journal">
+          <!-- JOURNAL(S) -->
+          <button type="btn-addJournal" class="btn btn-block btn-lg btn-outline-info" data-toggle="collapse" data-target="#journalCard">Write a Journal</button> 
+          <div id="journalCard" class="collapse">
+            <br>
+            <div class="card">
+              <div class="card-body">
+                <b>New Journal:</b><hr>
+
+                <form>
+                  <div class="form-group">
+                    <label for="input-title">Title</label>
+                    <input type="email" class="form-control" id="input-title" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="input-journal">Write Something Here</label>
+                    <textarea class="form-control" id="input-journal" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-info btn-block">Add </button>
+                </form>
+              </div>
+              
             </div>
             
           </div>
-          
-        </div>
-        <br>
-        
-        <div class="card">
-          <div class="card-header"><b>Journal</b></div>
-          <div class="card-body">
-            <!-- start generation here-->
-            <div class="row">
-              <b  id="journalRow-date" class="col-sm-2">22/01</b>
-              <div class="col-md-10">
-                <h5 id="journalRow-title">Title</h5>
-                <p id="journalRow-content">I Spy with my little eye</p>
-                <hr class="my-3">
+          <br>
+          <div class="card">
+            <div class="card-header"><b>Journal</b></div>
+            <div class="card-body">
+              <!-- start generation here-->
+              <div class="row">
+                <b  id="journalRow-date" class="col-sm-2">22/01</b>
+                <div class="col-md-10">
+                  <h5 id="journalRow-title">Spy</h5>
+                  <p id="journalRow-content">I Spy with my little eyes. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto blanditiis doloremque, esse officia quibusdam harum aspernatur debitis. Hic dolores est numquam eius enim ipsa eligendi iure. Eius, ratione. Debitis, necessitatibus!</p>
+                  <hr class="my-3">
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <b  id="journalRow-date" class="col-sm-2">22/01</b>
-              <div class="col-md-10">
-                <h5 id="journalRow-title">Title</h5>
-                <p id="journalRow-content">I Spy with my little eye</p>
+              <div class="row">
+                <b  id="journalRow-date" class="col-sm-2">22/01</b>
+                <div class="col-md-10">
+                  <h5 id="journalRow-title">Hear</h5>
+                  <p id="journalRow-content">I Hear with my tiny ears. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni magnam neque tempora excepturi nesciunt! Eaque inventore similique corrupti, et blanditiis officiis repellendus doloribus voluptate voluptates laudantium iusto sed labore excepturi.</p>
+                </div>
               </div>
+              <!-- until here -->
             </div>
-            <!-- until here -->
           </div>
-        </div>
+        </section>
       </div>
     </div>
 

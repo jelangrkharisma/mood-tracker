@@ -6,20 +6,38 @@
 /* Color Boards */
 .grid-container{
   display: grid;
-  grid-template-columns: repeat(13, 2.2em);
+  grid-template-columns: repeat(13, 2.5em);
 }
 .grid-item{
   margin-right: 2px;
   margin-top: 2px;
-  border: 1px solid rgb(100, 100, 100, 0.2);
+  border: 1px solid rgb(100, 100, 100, 0);
   text-align: center;
   border-radius: 10%;
+  cursor: pointer;
 }
-
 .grid-item-today{
   margin-right: 2px;
   margin-top: 2px;
-  border: 1px solid rgb(100, 100, 100);
+  border: 1px solid orange;
   text-align: center;
   border-radius: 10%;
+  cursor: pointer;
+}
+.moodType-1{
+  background-color: #e3ffb0;
+  border: 1px solid #3aadad;
+
+}
+.moodType-2{
+  background-color: #bae8e8;
+}
+.moodType-3{
+  background-color: #bae8e8;
+}
+.moodType-4{
+  background-color: #3aadad;
+}
+.moodType-5{
+  background-color: #292833;
 }
