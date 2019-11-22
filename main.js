@@ -47,7 +47,7 @@ for(let i=1; i<=thisMonthsNumberOfDays; i++){
   
   // append element to gridContainer
   gridContainer.appendChild(blockRowDate)
-  for(let j=1; j<12; j++){
+  for(let j=1; j<=12; j++){
     let gridItem = document.createElement('div')
     gridItem.id = `gi-${j}`
     if(i == day){
