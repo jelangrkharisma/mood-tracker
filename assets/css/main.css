@@ -1,5 +1,5 @@
 #content{
-  padding-top: 2em;
+  padding-top: 1.5em;
   padding-bottom: 4em;
 }
 
@@ -11,7 +11,15 @@
 .grid-item{
   margin-right: 2px;
   margin-top: 2px;
-  border: 1px solid rgb(100, 100, 100, 0.3);
+  border: 1px solid rgb(100, 100, 100, 0.2);
+  text-align: center;
+  border-radius: 10%;
+}
+
+.grid-item-today{
+  margin-right: 2px;
+  margin-top: 2px;
+  border: 1px solid rgb(100, 100, 100);
   text-align: center;
   border-radius: 10%;
 }
