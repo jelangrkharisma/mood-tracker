@@ -1,13 +1,15 @@
 # mood-tracker
 i learned about JS, HTML, CSS, Bootsrap, and DOM with this projects.
-for demonstration purpose, the mood-blocks are generated randomly
+for demonstration purpose, the mood-blocks are generated randomly.
+
+journals are generated from an array.
 
 TO-DO: 
-* Add CRUD - Doms for Journals
-
-* Generate Mood Blocks
+* Add CRUD - Doms for Journals, ~~Create~~, ~~Read~~, Update, Delete
+~~* Cycle through moods by clicking the blocks~~
+~~* Generate Mood Blocks~~
 * Create mood category
-* look up for fancy colors
+~~* look up for fancy colors~~?
 * polish with some icons
 
 # take a look at this
