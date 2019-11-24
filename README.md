@@ -1,22 +1,9 @@
 # mood-tracker
 i learned about JS, HTML, CSS, Bootsrap, and DOM with this projects.
-for demonstration purpose, the mood-blocks are generated randomly.
+for demonstration purpose, the mood-blocks are generated randomly (for now).
 
-journals are generated from an array.
+### Why track our moods?
+By using a mood diary you can monitor the patterns in your life and identify negative influences (or “triggers”) that you need to avoid, and early warning signs that your health is deteriorating. - https://psychcentral.com/blog/5-good-reasons-to-track-your-mood-an-interview-with-james-bishop/
 
-TO-DO:
-
-Add CRUD - Doms for Journals, ~~Create~~, ~~Read~~, Update, Delete
-
-~~Cycle through moods by clicking the blocks~~
-
-~~Generate Mood Blocks~~
-
-Create mood category
-
-~~look up for fancy colors~~?
-
-polish with some icons
-
-### take a look at this
-![build something like this](https://sheenaofthejournal.com/wp-content/uploads/2017/10/bossgirlbujo-1024x1024.jpg "something like this (but digital)")
+* click on the individual blocks to cycle through your mood.
+* write your journals
